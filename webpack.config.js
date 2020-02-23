@@ -21,10 +21,10 @@ module.exports = {
       exclude: /node_modules/,
     },
     {
-      test: /\.(png|jpg|gif|ico|svg)$/,
+      test: /\.(png|jpg|gif|ico|svg)$/i,
       use: ['file-loader?name=../images/[name].[ext]', {
         loader: 'image-webpack-loader',
-        options: {},
+        options: { esModule: false },
       },
       ],
     },
@@ -58,6 +58,11 @@ module.exports = {
       inject: false,
       template: './src/index.html',
       filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: './src/my-page.html',
+      filename: 'my-page.html',
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

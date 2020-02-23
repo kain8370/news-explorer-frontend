@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Новости, поиск новостей">
+  <meta name="description" content="Сервис для поиска новостей">
+  <title>Сохраненные статьи</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" href="<%=require('./images/favicon.png').default%>">
+</head>
+<body>
+  <header class="header header_color_black">
+    <h2 class="header__logo">NewsExplorer</h2>
+    <nav class="menu-authorized">
+      <a class="menu-authorized__item" href="#">
+        Главная
+      </a>
+      <a class="menu-authorized__item" href="#">
+        Сохранённые статьи
+      </a>
+      <a class="menu-authorized__item" href="#">
+        Грета
+      </a>
+    </nav>
+  </header>
+
+  <main class="my-page-main">
+    <h3 class="my-page-main__subtitle">
+      Сохранённые статьи
+    </h3>
+    <h1 class="my-page-main__title">
+      Грета, у вас 5 сохранённых статей
+    </h1>
+    <h2 class="my-page-main__description">
+      По ключевым словам: Природа, Тайга и 2 другим
+    </h2>
+  </main>
+
+  <section class="content">
+    <article class="card">
+      <a class="card__link" href="#"><img class="card__image" src="<%=require('./images/image3.jpg').default%>" alt="Картинка к статье"></a>
+      <time class="card__date">
+        2 августа, 2019
+      </time>
+      <h3 class="card__title">
+        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+      </h3>
+      <p class="card__content">
+        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+      </p>
+      <a class="card__source-link" href="#">Риа</a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="#"><img class="card__image" src="<%=require('./images/image3.jpg').default%>" alt="Картинка к статье"></a>
+      <time class="card__date">
+        2 августа, 2019
+      </time>
+      <h3 class="card__title">
+        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+      </h3>
+      <p class="card__content">
+        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+      </p>
+      <a class="card__source-link" href="#">Риа</a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="#"><img class="card__image" src="<%=require('./images/image3.jpg').default%>" alt="Картинка к статье"></a>
+      <time class="card__date">
+        2 августа, 2019
+      </time>
+      <h3 class="card__title">
+        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+      </h3>
+      <p class="card__content">
+        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+      </p>
+      <a class="card__source-link" href="#">Риа</a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="#"><img class="card__image" src="<%=require('./images/image3.jpg').default%>" alt="Картинка к статье"></a>
+      <time class="card__date">
+        2 августа, 2019
+      </time>
+      <h3 class="card__title">
+        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+      </h3>
+      <p class="card__content">
+        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+      </p>
+      <a class="card__source-link" href="#">Риа</a>
+    </article>
+    <article class="card">
+      <a class="card__link" href="#"><img class="card__image" src="<%=require('./images/image3.jpg').default%>" alt="Картинка к статье"></a>
+      <time class="card__date">
+        2 августа, 2019
+      </time>
+      <h3 class="card__title">
+        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+      </h3>
+      <p class="card__content">
+        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+      </p>
+      <a class="card__source-link" href="#">Риа</a>
+    </article>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__copyright">
+
+    </div>
+    <nav class="footer__menu">
+      <a class="footer__menu-link"></a>
+      <a class="footer__menu-link"></a>
+    </nav>
+    <div class="footer__social">
+      <a class="footer__social-link"><img src="<%=require('./images/github.png').default%>" alt="github" class="footer__social-icon"></a>
+      <a class="footer__social-link"><img src="<%=require('./images/facebook.png').default%>" alt="facebook" class="footer__social-icon"></a>
+    </div>
+  </footer>
+  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
+</body>
+</html>
