@@ -9,7 +9,10 @@ const cssnano = require('cssnano');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    main: './src/index.js',
+    myPage: './src/my-page.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
@@ -22,7 +25,7 @@ module.exports = {
     },
     {
       test: /\.(png|jpg|gif|ico|svg)$/i,
-      use: ['file-loader?name=../images/[name].[ext]', {
+      use: ['file-loader?name=../dist/images/[name].[ext]', {
         loader: 'image-webpack-loader',
         options: { esModule: false },
       },

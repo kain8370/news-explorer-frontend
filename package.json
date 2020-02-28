@@ -1,11 +1,13 @@
 {
   "name": "news-explorer-frontend",
+  "homepage": "https://github.com/kain8370/news-explorer-frontend.git",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/kain8370/news-explorer-frontend/issues"
   },
-  "homepage": "https://github.com/kain8370/news-explorer-frontend#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -30,6 +31,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "file-loader": "^5.1.0",
+    "gh-pages": "~2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",

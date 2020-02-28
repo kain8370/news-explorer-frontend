@@ -1,0 +1,28 @@
+@import '../search/__title/search__title.css';
+@import '../search/__subtitle/search__subtitle.css';
+@import '../search/__form/search__form.css';
+@import '../search/__form-input/seacrh__form-input.css';
+@import '../search/__form-button/search__form-button.css';
+
+.search {
+  max-width: 608px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    max-width: 448px;
+    padding: 38px 0 48px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search {
+    width: auto;
+    padding: 30px 16px 32px;;
+  }
+}

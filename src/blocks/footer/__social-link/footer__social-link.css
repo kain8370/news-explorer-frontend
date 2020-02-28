@@ -1,0 +1,17 @@
+.footer__social-link {
+  margin-left: 25px;
+}
+
+.footer__social-link[href$='github.com'] {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 570px) {
+  .footer__social-link {
+    margin: 0;
+  }
+
+  .footer__social-link:last-child {
+    margin-left: 25px;
+  }
+}

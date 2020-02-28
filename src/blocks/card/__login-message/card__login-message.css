@@ -1,0 +1,28 @@
+@import '_visible/card__login-message_visible.css';
+
+.card__login-message {
+  position: absolute;
+  top: 24px;
+  right: 69px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #000;
+  background: #fff;
+  border-radius: 10px;
+  padding: 13px 12px;
+  display: none;
+}
+
+.card__icon:hover + .card__login-message {
+  display: block;
+}
+
+@media screen and (max-width: 920px) {
+  .card__login-message {
+    top: 52px;
+    right: 8px;
+  }
+}

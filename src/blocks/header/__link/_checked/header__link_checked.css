@@ -1,0 +1,10 @@
+.header__link.header__link_checked {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+@media screen and (max-width: 630px) {
+  .header__link.header__link_checked {
+    border: none;
+  }
+}

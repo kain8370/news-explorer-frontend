@@ -1,0 +1,15 @@
+.results__title {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: #1A1B22;
+  margin: 0 auto 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .results__title {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+}

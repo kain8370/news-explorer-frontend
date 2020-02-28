@@ -1,0 +1,23 @@
+@import '../vendor/fonts/Inter/inter.css';
+@import '../vendor/fonts/sourcesanspro/sourcesanspro.css';
+@import '../vendor/fonts/roboto/roboto.css';
+@import '../blocks/header/header.css';
+@import '../blocks/my-page-main/my-page-main.css';
+@import '../blocks/content/content.css';
+@import '../blocks/card/card.css';
+@import '../blocks/footer/footer.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}

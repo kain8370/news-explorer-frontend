@@ -1,0 +1,41 @@
+@import '_visited/content_visited.css';
+
+.content {
+  padding: 62px calc((100% - 1223px) / 2);
+  background: #F5F6F7;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
+  gap: 16px;
+  display: none;
+}
+
+
+@media screen and (max-width: 1280px) {
+  .content {
+    padding: 32px 40px 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .content {
+    grid-template-columns: repeat(2, minmax(200px, 400px));
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .content {
+    padding: 24px 16px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content {
+    grid-template-columns: repeat(1, minmax(200px, 500px));
+  }
+}

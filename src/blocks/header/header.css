@@ -1,0 +1,28 @@
+@import '__checkbox/header__checkbox.css';
+@import '__logo/header__logo.css';
+@import '__menu/header__menu.css';
+@import '__navigation/header__navigation.css';
+@import '__toggle/header__toggle.css';
+@import '__link/header__link.css';
+@import '__login/header__login.css';
+@import '__logout/header__logout.css';
+@import '__background/header__background.css';
+@import '_color/_black/header_color_black.css';
+
+.header {
+  padding: 26px 104px;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    padding: 22px 40px 20px
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header {
+    padding: 0;
+  }
+}

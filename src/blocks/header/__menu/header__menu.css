@@ -1,0 +1,18 @@
+.header__menu {
+  margin-left: auto;
+  display: flex;
+  list-style: none;
+}
+
+@media screen and (max-width: 630px) {
+  .header__menu {
+    display: none;
+    margin: 0;
+  }
+
+  .header__checkbox:checked + .header__navigation .header__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

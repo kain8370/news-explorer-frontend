@@ -1,0 +1,12 @@
+.popup__form-link {
+  text-decoration: none;
+  color: #2F71E5;
+  font-family: Inter, Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.popup__title + .popup__form-link {
+  font-size: 18px;
+}

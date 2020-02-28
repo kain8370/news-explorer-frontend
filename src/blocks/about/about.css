@@ -1,0 +1,29 @@
+@import '__image/about__image.css';
+@import '__container/about__container.css';
+@import '__title/about__title.css';
+@import '__text/about__text.css';
+
+.about {
+  padding: 80px 104px;
+  background: #fff;
+  display: flex;
+}
+
+@media screen and (max-width: 1050px) {
+  .about {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .about {
+    flex-direction: column;
+    padding: 32px 16px 80px;
+  }
+}
