@@ -1,7 +1,0 @@
-.card__icon.card__icon_active {
-  background: url('../../../../images/checked.png') no-repeat 0 0 / cover;
-}
-
-.card__icon.card__icon_active:hover {
-  cursor: default;
-}
