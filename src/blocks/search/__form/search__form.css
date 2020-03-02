@@ -1,0 +1,9 @@
+.search__form {
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .search__form {
+    display: block;
+  }
+}

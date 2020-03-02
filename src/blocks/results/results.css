@@ -1,0 +1,22 @@
+@import '__title/results__title.css';
+@import '__container/results__container.css';
+@import '__button/results__button.css';
+@import '_visible/results_visible.css';
+
+.results {
+  padding: 80px calc((100% - 1223px) / 2);
+  background: #F5F6F7;
+  display: none;
+}
+
+@media screen and (max-width: 1245px) {
+  .results {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .results {
+    padding: 40px;
+  }
+}

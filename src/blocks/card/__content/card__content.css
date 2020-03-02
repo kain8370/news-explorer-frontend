@@ -1,0 +1,15 @@
+.card__content {
+  text-decoration: none;
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 274px);
+  box-sizing: border-box;
+  flex-grow: 2;
+  }
+
+@media screen and (max-width: 1000px) {
+  .card__content {
+    padding:16px;
+  }
+}

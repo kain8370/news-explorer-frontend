@@ -1,0 +1,16 @@
+.popup__image {
+  position: absolute;
+  right: -46px;
+  top: -46px;
+  transition-duration: 0.5s;
+}
+
+.popup__image:hover {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 530px) {
+  .popup__image {
+    right: 10px;
+  }
+}

@@ -1,0 +1,14 @@
+.search__title {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+}
+
+@media screen and (max-width: 320px) {
+  .search__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}

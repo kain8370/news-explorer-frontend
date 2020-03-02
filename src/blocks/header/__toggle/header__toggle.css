@@ -1,0 +1,28 @@
+.header__toggle {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url('../../../images/menu-black.png') no-repeat 90% 50% / 100%;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  margin-left: auto;
+  display: none;
+}
+
+.main .header__toggle {
+  background: url('../../../images/menu.png') no-repeat 90% 50% / 100%;
+}
+
+.header__toggle:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .header__toggle {
+    display: block;
+  }
+  .header__checkbox:checked + .header__navigation .header__toggle {
+    background: url('../../../images/cross.png') no-repeat top right/ 100%;
+}
+}

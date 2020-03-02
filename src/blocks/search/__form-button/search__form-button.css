@@ -1,0 +1,29 @@
+.search__form-button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 18px 54px 22px;
+  background: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  color: #fff;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  margin-left: -50px;
+  cursor: pointer;
+}
+
+.search__form-button:hover {
+  background: #347EFF;
+}
+
+.search__form-button:active {
+  background: #2A65CC;
+}
+
+@media screen and (max-width: 480px) {
+  .search__form-button {
+    width: 100%;
+    margin: 0;
+  }
+}

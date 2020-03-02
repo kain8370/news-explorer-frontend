@@ -1,0 +1,25 @@
+.popup__form-input {
+  width: 100%;
+  font-family: Inter, Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #000;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 9px 0 10px;
+  margin-bottom: 3px;
+}
+
+.popup__form-input:focus {
+  border-color: #347EFF;
+}
+
+.popup__form-input::placeholder {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(0, 0, 0, 0.2);
+}

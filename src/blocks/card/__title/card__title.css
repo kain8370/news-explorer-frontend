@@ -1,0 +1,16 @@
+.card__title {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+  margin: 12px 0 16px;
+}
+
+@media screen and (max-width: 920px) {
+  .card__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}

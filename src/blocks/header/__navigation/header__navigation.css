@@ -1,0 +1,23 @@
+.header__navigation {
+  display: flex;
+}
+
+@media screen and (max-width: 630px) {
+  .header__navigation {
+    padding: 16px;
+    z-index: 10000;
+  }
+
+  .header__checkbox:checked + .header__navigation {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    min-height: 280px;
+    background: #1A1B22;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,21 @@
+.card__delete-icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  background: url('../../../images/card-delete.png') no-repeat 0 0 / cover;
+  z-index: 100;
+}
+
+.card .card__delete-icon:hover {
+  background: url('../../../images/card-delete-hover.png') no-repeat 0 0 / cover;
+}
+
+@media screen and (max-width: 920px) {
+  .card__icon {
+    top: 8px;
+    right: 8px;
+  }
+}

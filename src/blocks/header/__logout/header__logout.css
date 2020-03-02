@@ -1,0 +1,51 @@
+@import '_color/_dark/header__logout_color_dark.css';
+@import '_hidden/header__logout_hidden.css';
+
+.header__logout {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  padding: 12px 40px 12px 13px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  background: url('../../../images/logout.png') no-repeat 90% 50%;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .header__logout {
+    font-size: 16px;
+    padding: 8px 35px 8px 8px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header__logout {
+    display: block;
+    padding: 15px 0 17px;
+    text-align: center;
+    margin: 0;
+    background-position: 58% 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__logout {
+    background-position: 60% 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__logout {
+    background-position: 62% 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__logout {
+    background-position: 64% 50%;
+  }
+}

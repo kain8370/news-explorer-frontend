@@ -1,0 +1,12 @@
+@import '__animation/preloader__animation.css';
+@import '__text/preloader__text.css';
+@import '_visible/preloader_visible.css';
+
+.preloader {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 95px 0 80px;
+  background: #F5F6F7;
+}
