@@ -6,7 +6,7 @@
       <meta name="keywords" content="Новости, поиск новостей">
       <meta name="description" content="Сервис для поиска новостей">
       <title>NewsExplorer</title>
-      <link rel="stylesheet" href="style.3a4235e4b0a7784a0769.css">
+      <link rel="stylesheet" href="style.f22e77325887ce36a941.css">
       <link rel="icon" href="./images/favicon.png">
 </head>
 <body>
@@ -19,9 +19,9 @@
               <label for="checkbox" class="header__toggle"></label>
               <ul class="header__menu">
                   <li><a class="header__link header__link_checked header__link_color_white" href="index.html">Главная</a></li>
-                  <li><a class="header__link" href="my-page.html">Сохранённые статьи</a></li>
-                  <li><a class="header__login header__login_hidden" href="#">Авторизоваться</a></li>
-                  <li><a class="header__logout" href="#">Грета</a></li>
+                  <li><a class="header__link header__link_hidden" href="my-page.html">Сохранённые статьи</a></li>
+                  <li><a class="header__login" href="#">Авторизоваться</a></li>
+                  <li><a class="header__logout header__logout_hidden" href="#">Грета</a></li>
               </ul>
           </nav>
           <div class="header__background"></div>
@@ -45,7 +45,7 @@
         </section>
       </section>
 
-      <section class="results results_visible">
+      <section class="results">
         <h2 class="results__title">
           Результаты поиска
         </h2>
@@ -110,7 +110,7 @@
         <button class="results__button">Показать еще</button>
       </section>
 
-      <section class="not-found not-found_visible">
+      <section class="not-found">
         <img src="./images/not-found.png" alt="Not-found-image" class="not-found__image">
         <h3 class="not-found__title">
           Ничего не&nbsp;найдено
@@ -121,7 +121,7 @@
         </p>
       </section>
 
-      <section class="preloader preloader_visible">
+      <section class="preloader">
         <div class="preloader__animation">
 
         </div>
@@ -158,18 +158,19 @@
           </ul>
         </nav>
       </footer>
-      <div class="popup" id="popup-signin">
-        <div class="popup__content">
+
+      <div class="popup">
+        <div class="popup__content" id="signin">
           <img src="./images/cross.png" alt="Cross" class="popup__image">
           <h3 class="popup__title">
             Вход
           </h3>
           <form class="popup__form" name="signin">
             <label class="popup__form-label">
-              Email</label>
+              Email
               <input type="email" class="popup__form-input" name="email" placeholder="Введите почту" pattern="[\w-]+@[\w-]+\.[A-Za-z]{2,5}" required>
               <span class="popup__form-error"></span>
-
+            </label>
             <label class="popup__form-label">
               Пароль
               <input type="password" class="popup__form-input" name="password" placeholder="Введите пароль" minlength="8" required>
@@ -180,10 +181,8 @@
             <p class="popup__form-text">или <a href="#" class="popup__form-link">Зарегистрироваться</a></p>
           </form>
         </div>
-      </div>
 
-      <div class="popup" id="popup-signup">
-        <div class="popup__content">
+        <div class="popup__content" id="signup">
           <img src="./images/cross.png" alt="Cross" class="popup__image">
           <h3 class="popup__title">
             Регистрация
@@ -201,18 +200,17 @@
             </label>
             <label class="popup__form-label">
               Имя
-              <input type="text" class="popup__form-input" pattern="[А-ЯЁ]{1}[а-яё]+(-[А-ЯЁ[а-яё]+)?" placeholder="Введите своё имя" required minlength="2" maxlength="20" name="name">
+              <input type="text" class="popup__form-input" pattern="[А-ЯЁ]{1}[а-яё]+(-[А-ЯЁ[а-яё]+)?" placeholder="Введите своё имя" required minlength="2" maxlength="30" name="name">
               <span class="popup__form-error"></span>
             </label>
             <span class="popup__server-error"></span>
-            <button class="popup__form-button">Войти</button>
+            <button class="popup__form-button" disabled>Зарегистрироваться</button>
             <p class="popup__form-text">или <a href="#" class="popup__form-link">Войти</a></p>
           </form>
         </div>
-      </div>
 
-      <div class="popup">
-        <div class="popup__content">
+        <div class="popup__content" id="registered">
+          <img src="./images/cross.png" alt="Cross" class="popup__image">
           <h3 class="popup__title">
             Пользователь успешно зарегистрирован!
           </h3>
@@ -220,7 +218,9 @@
             Выполнить вход
           </p>
         </div>
+
       </div>
-      <script src="main.83c8bca1a5ad16e5cf99.js"></script>
+
+      <script src="main.d83a8be2dcca3e81bcaa.js"></script>
 </body>
 </html>
