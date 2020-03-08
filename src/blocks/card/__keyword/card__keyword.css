@@ -1,3 +1,5 @@
+@import '_visible/card__keyword_visible.css';
+
 .card__keyword {
   position: absolute;
   top: 24px;
@@ -10,5 +12,6 @@
   padding: 11px 12px;
   background: #fff;
   border-radius: 10px;
+  display: none;
 }
 

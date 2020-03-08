@@ -12,6 +12,7 @@
   margin-bottom: 16px;
   border: none;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .popup__form-button:hover {

@@ -1,7 +1,7 @@
 .card__delete-message {
   position: absolute;
-  top: 0;
-  right: 45px;
+  top: 23px;
+  right: 70px;
   min-width: 150px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -16,7 +16,7 @@
   display: none;
 }
 
-.card__delete-icon:hover .card__delete-message {
+.card__delete-icon:hover +.card__delete-message {
   display: block;
 }
 

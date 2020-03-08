@@ -16,7 +16,7 @@
   display: none;
 }
 
-.card__icon:hover + .card__login-message {
+.message-visible ~ .card__login-message {
   display: block;
 }
 
