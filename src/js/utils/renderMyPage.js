@@ -10,7 +10,6 @@ export default async function renderMyPage() {
   const articles = await mainApi.getArticles();
   document.querySelector('#name').textContent = localStorage.getItem('name');
   document.querySelector('#count').textContent = articles.length;
-  console.log(articles);
   const keywords = articles.reduce((prevVal, elem) => {
     if (!prevVal[elem.keyword]) {
       // eslint-disable-next-line no-param-reassign

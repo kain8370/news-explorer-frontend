@@ -4,6 +4,10 @@ import MainApi from '../api/MainApi';
 
 import renderMyPage from '../utils/renderMyPage';
 
+if (!localStorage.getItem('token')) {
+  document.location.href = '/';
+}
+
 const mainApiUrl = 'https://api.kain-news.ru';
 const header = new Header();
 const mainApi = new MainApi(mainApiUrl);
@@ -13,11 +17,13 @@ renderMyPage();
 
 document.querySelector('.content').addEventListener('click', async (e) => {
   if (Array.from(document.querySelectorAll('.card__icon')).concat(e.target)) {
-    const result = await mainApi.removeArticle(e.target.parentElement.getAttribute('data-id'));
-    if (result) {
-      document.querySelector('.content').removeChild(e.target.parentElement);
-      document.querySelector('#count').textContent -= 1;
+    try {
+      await mainApi.removeArticle(e.target.parentElement.getAttribute('data-id'));
+    } catch (err) {
+      return;
     }
+    document.querySelector('.content').removeChild(e.target.parentElement);
+    document.querySelector('#count').textContent -= 1;
   }
 });
 

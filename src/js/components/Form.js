@@ -26,7 +26,7 @@ export default class Form {
   }
 
   validateForm(form) {
-    if (Array.from(form).slice(0, -1).every((elem) => this._validateInputElement(elem))) {
+    if (Array.from(form).slice(0, -1).every((formElem) => this._validateInputElement(formElem))) {
       this._makeButtonActive(form);
       return true;
     }
@@ -35,40 +35,27 @@ export default class Form {
   }
 
   clear(form) {
-    if (form === this.formSignin) {
-      for (let i = 0; i < form.length - 1; i += 1) {
-        this.formSignin[i].value = '';
-        this.formSignin[i].nextElementSibling.textContent = '';
-        this.signinServerError.textContent = '';
+    Array.from(form.elements).forEach((formElem) => {
+      if (!formElem.classList.contains('popup__form-button')) {
+        formElem.value = '';
+        formElem.nextElementSibling.textContent = '';
+      } else {
+        formElem.previousElementSibling.textContent = '';
       }
-    } else {
-      for (let i = 0; i < form.length - 1; i += 1) {
-        this.formSignup[i].value = '';
-        this.formSignup[i].nextElementSibling.textContent = '';
-        this.signupServerError.textContent = '';
-      }
-    }
+    });
+    this._makeButtonUnactive(form);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   getInfo(form) {
     let result = '';
-    if (form === this.formSignin) {
-      result = Array.from(this.formSignin).reduce((prevVal, elem) => {
-        if (elem.name) {
-          // eslint-disable-next-line no-param-reassign
-          prevVal[elem.name] = elem.value;
-        }
-        return prevVal;
-      }, {});
-    } else {
-      result = Array.from(this.formSignup).reduce((prevVal, elem) => {
-        if (elem.name) {
-          // eslint-disable-next-line no-param-reassign
-          prevVal[elem.name] = elem.value;
-        }
-        return prevVal;
-      }, {});
-    }
+    result = Array.from(form).reduce((prevVal, formElem) => {
+      if (formElem.name) {
+        // eslint-disable-next-line no-param-reassign
+        prevVal[formElem.name] = formElem.value;
+      }
+      return prevVal;
+    }, {});
     return result;
   }
 
@@ -84,7 +71,7 @@ export default class Form {
     if (form === this.formSignin) {
       this.signinButton.setAttribute('disabled', '');
     } else {
-      this.signinButton.setAttribute('disabled', '');
+      this.signupButton.setAttribute('disabled', '');
     }
   }
 

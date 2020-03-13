@@ -8,12 +8,18 @@ const newsApiOptions = {
 };
 const newsApi = new NewsApi(newsApiOptions);
 const newsCardList = new NewsCardList(document.querySelector('.results__container'));
+const buttonShowMore = document.querySelector('.results__button');
 
 export default async function searchNews(e) {
   e.preventDefault();
   document.querySelector('.preloader').classList.toggle('preloader_visible');
   localStorage.removeItem('articles');
-  await newsApi.getNews();
+  try {
+    await newsApi.getNews();
+  } catch (err) {
+    document.querySelector('.preloader').classList.toggle('preloader_visible');
+    return;
+  }
   if (JSON.parse(localStorage.getItem('articles')).length > 0) {
     document.querySelector('.results__container').innerHTML = '';
     localStorage.setItem('keyword', document.querySelector('.search__form-input').value);
@@ -22,6 +28,11 @@ export default async function searchNews(e) {
       const card = new NewsCard(elem, localStorage.getItem('keyword'));
       newsCardList.addCard(card.getCard());
     });
+    if (articles.length > 0) {
+      buttonShowMore.classList.add('results__button_visible');
+    } else if (buttonShowMore.classList.contains('results__button_visible')) {
+      buttonShowMore.classList.remove('results__button_visible');
+    }
     localStorage.setItem('articles', JSON.stringify(articles));
     newsCardList.renderResults();
     document.querySelector('.preloader').classList.toggle('preloader_visible');

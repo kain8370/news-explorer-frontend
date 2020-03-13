@@ -8,11 +8,15 @@ export default class NewsApi {
 
   getNews() {
     return fetch(`${this.url}/everything?q=${document.querySelector('.search__form-input').value}&apiKey=${this.apiKey}&from=${this._getDateFrom7()}&to=${this._getDateNow()}&pageSize=100`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(new Error(`Ошибка: ${res.status}`));
+      })
       .then((res) => {
         localStorage.setItem('articles', JSON.stringify(res.articles));
-      })
-      .catch((err) => err);
+      });
   }
 
   _getDateFrom7() {

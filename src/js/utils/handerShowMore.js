@@ -9,6 +9,7 @@ export default function handlerShowMore() {
     const card = new NewsCard(elem, localStorage.getItem('keyword'));
     newsCardList.addCard(card.getCard());
   });
+  if (articles.length === 0) document.querySelector('.results__button').classList.remove('results__button_visible');
   localStorage.setItem('articles', JSON.stringify(articles));
   newsCardList.showMore();
 }

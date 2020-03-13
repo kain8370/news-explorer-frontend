@@ -7,13 +7,19 @@ const form = new Form();
 
 export default async function signin(e) {
   e.preventDefault();
-  const res = await mainApi.signin(form.getInfo(e.target));
-  if (res.message) {
-    form.setServerError(res.message);
-  } else {
+  try {
+    const res = await mainApi.signin(form.getInfo(e.target));
     localStorage.setItem('token', res.token);
+  } catch (err) {
+    form.setServerError(err.message);
+    return;
+  }
+  try {
     const userData = await mainApi.getUserData();
     localStorage.setItem('name', userData.name);
-    document.location.href = '/';
+  } catch (err) {
+    form.setServerError(err.message);
+    return;
   }
+  document.location.href = '/';
 }

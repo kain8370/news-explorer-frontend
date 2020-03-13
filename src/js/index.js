@@ -44,7 +44,6 @@ document.querySelector('#signup .popup__image').addEventListener('click', (e) =>
 });
 document.querySelector('#registered .popup__image').addEventListener('click', (e) => {
   popup.close(e);
-  form.clear(e.target.parentElement);
 });
 
 document.forms.signin.addEventListener('input', (event) => {

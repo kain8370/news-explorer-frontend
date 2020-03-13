@@ -4,8 +4,8 @@ const mainApiUrl = 'https://api.kain-news.ru';
 const mainApi = new MainApi(mainApiUrl);
 
 export default async function saveArticles(e) {
-  const items = document.querySelectorAll('.card__icon');
-  if (Array.from(items).concat(e.target)) {
+  const cardIcons = document.querySelectorAll('.card__icon');
+  if (Array.from(cardIcons).concat(e.target)) {
     if (localStorage.getItem('token')) {
       const elem = e.target.parentElement;
       const data = {};
@@ -16,11 +16,13 @@ export default async function saveArticles(e) {
       data.text = elem.querySelector('.card__text').textContent.trim();
       data.source = elem.querySelector('.card__source').textContent;
       data.keyword = elem.getAttribute('data-keyword');
-      const res = await mainApi.createArticles(data);
-      if (!res.statusCode) {
-        e.target.classList.add('card__icon_active');
+      try {
+        const res = await mainApi.createArticles(data);
         e.target.parentElement.setAttribute('data-id', res.data._id);
+      } catch (err) {
+        return;
       }
+      e.target.classList.add('card__icon_active');
     }
   }
 }

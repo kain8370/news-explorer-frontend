@@ -1,5 +1,6 @@
+@import '_visible/results__button_visible.css';
+
 .results__button {
-  display: block;
   margin: auto;
   padding: 18px 84px 22px;
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -11,6 +12,7 @@
   border-radius: 80px;
   border: none;
   cursor: pointer;
+  display: none;
 }
 
 .results__button:hover {

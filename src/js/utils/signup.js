@@ -9,11 +9,11 @@ const popup = new Popup();
 
 export default async function signup(e) {
   e.preventDefault();
-  const res = await mainApi.signup(form.getInfo(e.target));
-  if (res.message) {
-    form.setServerError(res.message);
-  } else {
+  try {
+    await mainApi.signup(form.getInfo(e.target));
     popup.clearContent(e.target.parentElement);
     popup.open(true);
+  } catch (err) {
+    form.setServerError(err.message);
   }
 }

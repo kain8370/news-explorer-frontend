@@ -14,9 +14,12 @@ export default class MainApi {
         name, email, password,
       }),
     })
-      .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => err);
+      .then((res) => {
+        if (!res.ok) {
+          return Promise.reject(new Error(`Ошибка: ${res.status}`));
+        }
+        return res.json();
+      });
   }
 
   signin(data) {
@@ -30,9 +33,12 @@ export default class MainApi {
         email, password,
       }),
     })
-      .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => err);
+      .then((res) => {
+        if (!res.ok) {
+          return Promise.reject(new Error(`Ошибка: ${res.status}`));
+        }
+        return res.json();
+      });
   }
 
   getUserData() {
@@ -46,10 +52,8 @@ export default class MainApi {
         if (res.ok) {
           return res.json();
         }
-        return Promise.reject(res.status);
-      })
-      .then((res) => res)
-      .catch((err) => err);
+        return Promise.reject(new Error(`Ошибка: ${res.status}`));
+      });
   }
 
   createArticles(data) {
@@ -66,9 +70,12 @@ export default class MainApi {
         image, link, date, title, source, text, keyword,
       }),
     })
-      .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => err);
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(new Error(res.status));
+      });
   }
 
   getArticles() {
@@ -82,10 +89,8 @@ export default class MainApi {
         if (res.ok) {
           return res.json();
         }
-        return Promise.reject(res.status);
-      })
-      .then((res) => res)
-      .catch((err) => err);
+        return Promise.reject(new Error(res.status));
+      });
   }
 
   removeArticle(_id) {
@@ -95,8 +100,11 @@ export default class MainApi {
         authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     })
-      .then((res) => res.json())
-      .then((res) => res)
-      .catch((err) => err);
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(new Error(res.status));
+      });
   }
 }
