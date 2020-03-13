@@ -1,3 +1,5 @@
+@import '_visible/popup__content_visible.css';
+
 .popup__content {
   position: relative;
   width: 430px;
@@ -7,4 +9,5 @@
   border-radius: 16px;
   box-sizing: border-box;
   padding: 34px 35px 28px;
+  display: none;
 }

@@ -1,4 +1,4 @@
-@import '_visited/content_visited.css';
+@import '_visible/content_visible.css';
 
 .content {
   padding: 62px calc((100% - 1223px) / 2);
